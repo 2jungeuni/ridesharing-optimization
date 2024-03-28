@@ -11,7 +11,7 @@ Ride-sharing optimization formulation based on queuing theory [1].
 - Demand and supply of an M/M/1 queue are calculated from average traffic inflows and outflows during four years [2].
 - The average traffic inflows and outflows are in `./data` for each time period (weekday morning, weekday lunch, weekday dinner, weekday night, weekend morning, weekend lunch, weekend dinner, weekend night).
 
-Please refer to Section 5.4 of [1] for detailed notations and derivations. There are the two most important metrics.
+Please refer to Section 5.4 of [1] for detailed notations and derivations. There are the two most important terms.
 - $\frac{1}{\lambda_i}$: the average number of arriving passengers to zone $i$.
 - $\frac{\rho_i}{\mu_i - \lambda_i}$: the average waiting time of serviced passengers at zone $i$.
 

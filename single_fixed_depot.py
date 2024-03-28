@@ -187,14 +187,14 @@ def main(problem, depot, limit, alpha, beta):
     return route[:-1]
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Enter the zone index you want to start from.")
-    parser.add_argument("-z", "--zone", required=True, help="zone index")
-    parser.add_argument("-l", "--limit", required=True, help="time limit")
-    parser.add_argument("-a", "--alpha", required=True, help="alpha")
-    parser.add_argument("-b", "--beta", required=True, help="beta")
+    parser = argparse.ArgumentParser(description="")
+    parser.add_argument("-z", "--zone", required=True, help="Enter the zone index you want to start from.")
+    parser.add_argument("-l", "--limit", required=True, help="Define the working time for a ride-sharing vehicle.")
+    parser.add_argument("-a", "--alpha", required=True, help="Set the weight for the number of serviced passengers.")
+    parser.add_argument("-b", "--beta", required=True, help="Set the weight for waiting times for passengers.")
     args = parser.parse_args()
     depot = int(args.zone)
-    time_limit = int(args.limit)
+    time_limit = float(args.limit)
     alpha = float(args.alpha)
     beta = float(args.beta)
 
