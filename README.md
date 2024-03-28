@@ -24,7 +24,7 @@ $$\begin{align}
 & \sum_{j=0}^N x_{kj} = 1, \sum_{i=0}^N x_{ik} = 0, \sum_{j=0}^N x_{0j} = 0, \sum_{i=0}^N x_{i0} = 1 &\\
 & \sum_{j=0}^N x_{ij} = y_i &\forall i \in \{1, ..., N\} \setminus k\\
 & \sum_{i=0}^N x_{ij} = y_j &\forall j \in \{1, ..., N\} \setminus k\\
-& x_{ij} \in `\{0, 1\}` &\forall i,j \in \{0, 1, ..., N\} \\
+& x_{ij} \in \lbrace 0, 1 \rbrace &\forall i,j \in \{0, 1, ..., N\} \\
 & y_{i} \in \{0, 1\} &\forall i \in \{1, ..., N\} \setminus k \\
 & y_0 = y_k = 1
 \end{align}$$
