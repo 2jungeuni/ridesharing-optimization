@@ -1,4 +1,5 @@
 import os
+import argparse
 import numpy as np
 from pathlib import Path
 
@@ -52,7 +53,9 @@ def instance_loader(path):
     return {"n": n, "p": prize, "m": distance_matrix}
 
 # solve optimization
-def main(problem):
+def main(problem, depot, limit, alpha, beta):
+    assert 1 <= depot <= 63, "depot should be between 1 and 63."
+
     # path to instance folder
     pathInstances = './data'
 
@@ -66,15 +69,15 @@ def main(problem):
     # reading instance from file
     ris = instance_loader(instance_path)
     # depot
-    o = np.random.randint(1, 63)  # TODO: can be changed
-    d = 0  # TODO: can be changed
+    o = depot   # TODO: can be changed
+    d = 0   # TODO: can be changed
 
     # prize
     p = ris["p"]
     p[0] = 0
     prize = {}
     for p_key, p_val in p.items():
-        prize[p_key] = -1 * p_val
+        prize[p_key] = -1 * alpha * p_val
 
     # arch's weight
     t = ris["m"]
@@ -93,7 +96,7 @@ def main(problem):
     for i, row in enumerate(t):
         for j, elem in enumerate(row):
             if (i != j):
-                dist[(i, j)] = 0 * t[i][j]
+                dist[(i, j)] = beta * t[i][j]
                 dist_selected[(i, j)] = t[i][j]
 
     # edge
@@ -122,7 +125,7 @@ def main(problem):
     # Constraint 5: there is a time limit.
     cons5 = m.addConstr(gp.quicksum(dist_selected[i, j] * e_vars[i, j]
                                     for i in range(0, ris["n"] + 1)
-                                    for j in range(0, ris["n"] + 1) if i != j) + 30 * p_vars.sum('*') <= 3600)
+                                    for j in range(0, ris["n"] + 1) if i != j) + 30 * p_vars.sum('*') <= limit)
 
     # optimize model
     m._vars = e_vars
@@ -184,6 +187,17 @@ def main(problem):
     return route[:-1]
 
 if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="Enter the zone index you want to start from.")
+    parser.add_argument("-z", "--zone", required=True, help="zone index")
+    parser.add_argument("-l", "--limit", required=True, help="time limit")
+    parser.add_argument("-a", "--alpha", required=True, help="alpha")
+    parser.add_argument("-b", "--beta", required=True, help="beta")
+    args = parser.parse_args()
+    depot = int(args.zone)
+    time_limit = int(args.limit)
+    alpha = float(args.alpha)
+    beta = float(args.beta)
+
     problem = "we_morning.tw"
-    route = main(problem)
+    route = main(problem, depot, time_limit, alpha, beta)
     print("route: ", route)

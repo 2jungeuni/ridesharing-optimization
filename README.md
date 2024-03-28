@@ -40,7 +40,27 @@ $$\begin{align}
         & x_{ijk} \in \lbrace 0,1 \rbrace &\forall i, j \in \lbrace 1, ..., N \rbrace, k \in \lbrace 1, ..., V \rbrace \\
         & y_{ik} \in \lbrace 0,1 \rbrace &\forall i \in \lbrace 0, ..., N \rbrace, k \in \lbrace 1, ..., V \rbrace 
     \end{align}$$
+
+Setting $\alpha=1$ and $\beta=0$ tries to serve as many passengers as possible.
+### :runner: Run demo code
+To use more decision variables and constraints, Gurobipy educational license [3] was used.
+The location you want to start from and the time limit are needed. The location indices are as follows.
+<div align="center">
+    <img src="./img/depot.svg" alt="demand flow" width="150">
+</div>
+
+#### Single vehicle control
+```python
+python3 single_fixed_depot.py -z ${depot_index} -l ${time_limit} -a ${alpha} -b ${beta}
+```
+For exmaple,
+```python
+python3 single_fixed_depot.py -z 3 -l 3600 -a 1 -b 0
+```
+#### Multiple vehicle control
+
 ### :earth_asia: Visualization
+
 #### Single vehicle control
 
 #### Multiple vehicle control
