@@ -67,10 +67,14 @@ For example,
 python3 multi_no_depot.py -v 6 -l 1800 -a 1 -b 0
 ```
 ### :earth_asia: Visualization
-
 #### Single vehicle control
-
+<div align="center">
+    <img src="./img/single_path.png" alt="multi_path_result" width="150">
+</div>
 #### Multiple vehicle control
+<div align="center">
+    <img src="./img/multi_path.png" alt="multi_path_result" width="150">
+</div>
 
 ### :pushpin: References
 [1] Lee, Jungeun and Kim, Sunhwi and Kim, Eunchong and Vo, Cong Phat and Song, Jeonghwan and Jeon, Jeong hwan, Deep Reinforcement Learning-Based Autonomous Ride-Sharing System. Available at SSRN: https://ssrn.com/abstract=4773032 or http://dx.doi.org/10.2139/ssrn.4773032  
