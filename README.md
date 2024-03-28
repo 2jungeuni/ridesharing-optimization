@@ -71,6 +71,7 @@ python3 multi_no_depot.py -v 6 -l 1800 -a 1 -b 0
 <div align="center">
     <img src="./img/single_path.png" alt="multi_path_result" width="150">
 </div>
+
 #### Multiple vehicle control
 <div align="center">
     <img src="./img/multi_path.png" alt="multi_path_result" width="150">
