@@ -31,14 +31,14 @@ $$\begin{align}
 #### Multiple vehicle control
 $$\begin{align}
         \max_{x,y} \quad & \sum_{i=0}^N \sum_{k=1}^V \left(\alpha \frac{1}{\lambda_i} - \beta \frac{\rho_i}{\mu_i - \lambda_i}\right)y_{ik} &\\
-        \textrm{s.t.} \quad & \sum_{i=0}^N \sum_{j=0}^N c_{ijk} x_{ijk} + \sum_{i=0}^N \delta y_{ik} \leq \tau &\forall k \in \{1, ..., V\} \\
-        & \sum_{i, j \in S} x_{ijk} \leq |S| - 1 &\forall S \subseteq \{1, ..., N\}, |S| \geq 2, k \in \{1, ..., V\} \\
-        & \sum_{j=0}^N x_{ijk} = p_{ik} &\forall i \in \{0, ..., N\}, k \in \{1, ..., V\} \\
-        & \sum_{i=0}^N x_{ijk} = p_{jk} &\forall j \in \{0, ..., N\}, k \in \{1, ..., V\} \\ 
-        & \sum_{k=1}^V y_{ik} \leq 1 &\forall i \in \{1, ..., N\} \\
+        \textrm{s.t.} \quad & \sum_{i=0}^N \sum_{j=0}^N c_{ijk} x_{ijk} + \sum_{i=0}^N \delta y_{ik} \leq \tau &\forall k \in \lbrace 1, ..., V \rbrace \\
+        & \sum_{i, j \in S} x_{ijk} \leq |S| - 1 &\forall S \subseteq \{1, ..., N\}, |S| \geq 2, k \in \lbrace 1, ..., V \rbrace \\
+        & \sum_{j=0}^N x_{ijk} = p_{ik} &\forall i \in \lbrace 0, ..., N \rbrace, k \in \lbrace 1, ..., V \rbrace \\
+        & \sum_{i=0}^N x_{ijk} = p_{jk} &\forall j \in \lbrace 0, ..., N \rbrace, k \in \lbrace 1, ..., V \rbrace \\ 
+        & \sum_{k=1}^V y_{ik} \leq 1 &\forall i \in \lbrace 1, ..., N \rbrace \\
         & \sum_{k=1}^V p_{0k} = V &\\
-        & x_{ijk} \in \{0,1\} &\forall i, j \in \{1, ..., N\}, k \in \{1, ..., V\} \\
-        & y_{ik} \in \{0,1\} &\forall i \in \{0, ..., N\}, k \in \{1, ..., V\} 
+        & x_{ijk} \in \lbrace 0,1 \rbrace &\forall i, j \in \lbrace 1, ..., N \rbrace, k \in \lbrace 1, ..., V \rbrace \\
+        & y_{ik} \in \lbrace 0,1 \rbrace &\forall i \in \lbrace 0, ..., N \rbrace, k \in \lbrace 1, ..., V \rbrace 
     \end{align}$$
 ### :earth_asia: Visualization
 #### Single vehicle control
