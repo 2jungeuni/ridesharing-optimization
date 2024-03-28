@@ -20,12 +20,12 @@ $$\begin{align}
 \max_{x, y} \quad & \sum_{i=0}^N \left(\alpha\frac{1}{\lambda_i} - \beta\frac{\rho_i}{\mu_i - \lambda_i}\right)y_i &\\
 \textrm{s.t.} \quad 
 & \sum_{i=0}^N \sum_{j=0}^N c_{ij}x_{ij} + \sum_{i=0}^N y_i \delta \leq \tau &\\
-& \sum_{i,j \in S} x_{ij} \leq |S| - 1 &\forall S \subseteq \{0, 1, ..., N\}, |S| \geq 2\\
+& \sum_{i,j \in S} x_{ij} \leq |S| - 1 &\forall S \subseteq \lbrace 0, 1, ..., N \rbrace, |S| \geq 2\\
 & \sum_{j=0}^N x_{kj} = 1, \sum_{i=0}^N x_{ik} = 0, \sum_{j=0}^N x_{0j} = 0, \sum_{i=0}^N x_{i0} = 1 &\\
-& \sum_{j=0}^N x_{ij} = y_i &\forall i \in \{1, ..., N\} \setminus k\\
-& \sum_{i=0}^N x_{ij} = y_j &\forall j \in \{1, ..., N\} \setminus k\\
-& x_{ij} \in \lbrace 0, 1 \rbrace &\forall i,j \in \{0, 1, ..., N\} \\
-& y_{i} \in \{0, 1\} &\forall i \in \{1, ..., N\} \setminus k \\
+& \sum_{j=0}^N x_{ij} = y_i &\forall i \in \lbrace 1, ..., N \rbrace \setminus k\\
+& \sum_{i=0}^N x_{ij} = y_j &\forall j \in \lbrace 1, ..., N \rbrace \setminus k\\
+& x_{ij} \in \lbrace 0, 1 \rbrace &\forall i,j \in \lbrace 0, 1, ..., N \rbrace \\
+& y_{i} \in \lbrace 0, 1 \rbrace &\forall i \in \lbrace 1, ..., N \rbrace \setminus k \\
 & y_0 = y_k = 1
 \end{align}$$
 #### Multiple vehicle control
