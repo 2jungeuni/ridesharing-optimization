@@ -58,7 +58,14 @@ For exmaple,
 python3 single_fixed_depot.py -z 3 -l 3600 -a 1 -b 0
 ```
 #### Multiple vehicle control
-
+Unlike `single_fixed_depot.py`, we should decide the number of vehicles to control and the fixed depot doesn't need.
+```python
+python3 multi_no_depot.py -v ${num_vehicles} -l ${time_limit} -a ${alpha} -b ${beta}
+```
+For example,
+```python
+python3 multi_no_depot.py -v 6 -l 1800 -a 1 -b 0
+```
 ### :earth_asia: Visualization
 
 #### Single vehicle control
