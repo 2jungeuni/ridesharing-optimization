@@ -24,8 +24,8 @@ $$\begin{align}
 & \sum_{j=0}^N x_{kj} = 1, \sum_{i=0}^N x_{ik} = 0, \sum_{j=0}^N x_{0j} = 0, \sum_{i=0}^N x_{i0} = 1 &\\
 & \sum_{j=0}^N x_{ij} = y_i &\forall i \in \{1, ..., N\} \setminus k\\
 & \sum_{i=0}^N x_{ij} = y_j &\forall j \in \{1, ..., N\} \setminus k\\
-& x_{ij} \in \left{0, 1\right} &\forall i,j \in \{0, 1, ..., N\} \\
-& y_{i} \in \left{0, 1\right} &\forall i \in \{1, ..., N\} \setminus k \\
+& x_{ij} \in \left\{0, 1\right\} &\forall i,j \in \{0, 1, ..., N\} \\
+& y_{i} \in \left\{0, 1\right\} &\forall i \in \{1, ..., N\} \setminus k \\
 & y_0 = y_k = 1
 \end{align}$$
 #### Multiple vehicle control
@@ -37,8 +37,8 @@ $$\begin{align}
         & \sum_{i=0}^N x_{ijk} = p_{jk} &\forall j \in \{0, ..., N\}, k \in \{1, ..., V\} \\ 
         & \sum_{k=1}^V y_{ik} \leq 1 &\forall i \in \{1, ..., N\} \\
         & \sum_{k=1}^V p_{0k} = V &\\
-        & x_{ijk} \in \left{0,1\right} &\forall i, j \in \{1, ..., N\}, k \in \{1, ..., V\} \\
-        & y_{ik} \in \left{0,1\right} &\forall i \in \{0, ..., N\}, k \in \{1, ..., V\} 
+        & x_{ijk} \in \left\{0,1\right\} &\forall i, j \in \{1, ..., N\}, k \in \{1, ..., V\} \\
+        & y_{ik} \in \left\{0,1\right\} &\forall i \in \{0, ..., N\}, k \in \{1, ..., V\} 
     \end{align}$$
 ### :earth_asia: Visualization
 #### Single vehicle control
